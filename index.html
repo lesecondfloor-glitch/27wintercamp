@@ -3,886 +3,472 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>笑咍咍台羅營2027 後驛行踏 報名表</title>
+<title>笑咍咍台羅營2027 後驛行踏報名表</title>
 <style>
   :root {
-    --bg: #FAF6EE;
-    --paper: #FFFDF8;
-    --yellow: #D4A820;
-    --yellow-light: #E8C840;
-    --yellow-pale: #FDF5D8;
-    --yellow-deep: #A07810;
-    --dark: #3A3020;
-    --dark-soft: #6A5E40;
-    --line: #E8DCC0;
-    --coral: #D94E2A;
+    --bg: #FAF6ED;
+    --paper: #FFFDF7;
+    --yellow: #D4A82A;
+    --yellow-light: #E8C84A;
+    --yellow-pale: #FDF6DC;
+    --yellow-deep: #A07818;
+    --dark: #2A2520;
+    --brown: #3D3020;
+    --brown-soft: #7A6844;
+    --line: #EAD9A8;
+    --coral: #C84A2A;
   }
-
   * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    color: var(--dark);
-    -webkit-font-smoothing: antialiased;
-  }
-
+  body { margin: 0; background: var(--bg); font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; color: var(--brown); -webkit-font-smoothing: antialiased; }
   .wrap { max-width: 680px; margin: 0 auto; padding: 0 0 80px; }
-
-  /* Banner */
-  .banner img {
-    width: 100%;
-    display: block;
-    max-height: 260px;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  /* Intro */
-  .intro {
-    background: #3A3020;
-    color: #FDF5D8;
-    padding: 24px 28px;
-    font-size: 14.5px;
-    line-height: 1.85;
-  }
-  .intro h2 { margin: 0 0 12px; font-size: 21px; font-weight: 900; color: #E8C840; }
+  .banner img { width: 100%; display: block; max-height: 280px; object-fit: cover; object-position: center; }
+  .poster { padding: 0 20px; margin-top: 20px; }
+  .poster img { width: 100%; border-radius: 18px; display: block; box-shadow: 0 6px 24px -8px rgba(42,37,32,0.2); }
+  .product { padding: 0 20px; margin-top: 16px; }
+  .product img { width: 100%; border-radius: 14px; display: block; }
+  .intro { background: var(--dark); color: #FDF6DC; padding: 22px 28px; font-size: 15px; line-height: 1.9; }
+  .intro h2 { margin: 0 0 12px; font-size: 21px; font-weight: 900; color: var(--yellow-light); }
   .intro p { margin: 0 0 8px; }
-  .intro strong { color: #E8C840; }
-
-  /* Product image */
-  .product-block {
-    margin: 20px 20px 0;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 16px -6px rgba(58,48,32,0.18);
-  }
-  .product-block img { width: 100%; display: block; }
-
-  /* Notice */
-  .notice {
-    margin: 20px 20px 0;
-    background: var(--yellow-pale);
-    border-left: 5px solid var(--yellow);
-    border-radius: 14px;
-    padding: 18px 20px;
-    font-size: 14px;
-    line-height: 1.85;
-    color: var(--dark);
-  }
-  .notice strong { color: var(--yellow-deep); }
-
-  /* Instructor */
-  .instructor-block {
-    margin: 20px 20px 0;
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 3px 14px -6px rgba(58,48,32,0.1);
-  }
-  .instructor-title {
-    background: #3A3020;
-    color: #E8C840;
-    padding: 14px 20px;
-    font-size: 15.5px;
-    font-weight: 800;
-  }
+  .intro strong { color: var(--yellow-light); }
+  .fee-box { margin: 14px 0 0; background: rgba(212,168,42,0.15); border-left: 4px solid var(--yellow); border-radius: 10px; padding: 14px 16px; font-size: 14px; }
+  .fee-main { font-size: 18px; font-weight: 900; color: var(--yellow-light); margin-bottom: 6px; }
+  .notice { margin: 20px 20px 0; background: var(--dark); color: #FDF6DC; border-radius: 16px; padding: 20px 22px; font-size: 14px; line-height: 1.9; }
+  .notice strong { color: var(--yellow-light); }
+  .instructor-block { margin: 20px 20px 0; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .instructor-title { background: var(--dark); color: var(--yellow-light); padding: 14px 20px; font-size: 15px; font-weight: 800; }
   .instructor-card { padding: 18px 20px; }
-  .instructor-name { font-size: 15.5px; font-weight: 800; color: var(--yellow-deep); margin-bottom: 10px; }
-  .instructor-history { font-size: 13.5px; line-height: 1.9; color: var(--dark-soft); }
-
-  /* Page indicator */
+  .instructor-name { font-size: 15px; font-weight: 800; color: var(--yellow-deep); margin-bottom: 10px; }
+  .instructor-history { font-size: 13px; line-height: 1.9; color: var(--brown-soft); }
+  .section-head { margin: 24px 20px 0; background: var(--dark); color: var(--yellow-light); border-radius: 14px 14px 0 0; padding: 14px 20px; font-size: 16px; font-weight: 800; }
   .page-indicator { display: flex; justify-content: center; gap: 8px; margin: 20px 0 0; }
   .page-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--line); transition: background 0.2s; }
   .page-dot.active { background: var(--yellow); }
-
-  /* Progress */
   .progress-wrap { margin: 12px 20px 0; display: flex; align-items: center; gap: 10px; }
-  .progress-bar { flex: 1; height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; }
+  .progress-bar { flex: 1; height: 7px; background: var(--line); border-radius: 999px; overflow: hidden; }
   .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--yellow), var(--yellow-light)); border-radius: 999px; transition: width 0.35s ease; }
-  .progress-label { font-size: 12.5px; color: var(--dark-soft); font-weight: 700; white-space: nowrap; }
-
-  /* Section head */
-  .section-head {
-    margin: 20px 20px 0;
-    background: #3A3020;
-    color: #E8C840;
-    border-radius: 14px 14px 0 0;
-    padding: 14px 20px;
-    font-size: 16px;
-    font-weight: 800;
-  }
-
-  /* Cards */
-  .card {
-    background: var(--paper);
-    border-radius: 16px;
-    padding: 22px 20px;
-    margin: 12px 20px 0;
-    border: 1px solid var(--line);
-    box-shadow: 0 3px 14px -6px rgba(58,48,32,0.08);
-  }
-  .q-title { font-size: 15.5px; font-weight: 700; line-height: 1.55; color: var(--dark); margin-bottom: 6px; }
+  .progress-label { font-size: 12.5px; color: var(--brown-soft); font-weight: 700; white-space: nowrap; }
+  .card { background: var(--paper); border-radius: 16px; padding: 22px 20px; margin: 12px 20px 0; border: 1px solid var(--line); box-shadow: 0 3px 14px -6px rgba(42,37,32,0.08); }
+  .q-title { font-size: 15.5px; font-weight: 700; line-height: 1.55; color: var(--brown); margin-bottom: 6px; }
   .q-title .req { color: var(--coral); margin-left: 3px; }
-  .q-sub { font-size: 13px; color: var(--dark-soft); margin-bottom: 14px; line-height: 1.6; }
-
-  /* Inputs */
-  input[type="text"], input[type="email"], input[type="date"], textarea.q-text {
-    width: 100%;
-    border: 1.5px solid var(--line);
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-size: 14.5px;
-    font-family: inherit;
-    color: var(--dark);
-    background: #fff;
-    transition: border-color 0.18s;
-  }
-  input:focus, textarea.q-text:focus { outline: none; border-color: var(--yellow); }
-  input::placeholder, textarea::placeholder { color: #C4B498; }
+  .q-sub { font-size: 13px; color: var(--brown-soft); margin-bottom: 14px; line-height: 1.65; }
+  input[type="text"],input[type="email"],input[type="date"],textarea.q-text { width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 15px; font-family: inherit; color: var(--brown); background: #fff; transition: border-color 0.18s; }
+  input:focus,textarea:focus { outline: none; border-color: var(--yellow); }
+  input::placeholder,textarea::placeholder { color: #C4A888; }
   textarea.q-text { resize: vertical; min-height: 80px; }
-
-  /* Radio options */
   .options { display: flex; flex-direction: column; gap: 9px; }
-  .opt {
-    display: flex; align-items: center; gap: 11px;
-    padding: 12px 15px;
-    border: 1.5px solid var(--line);
-    border-radius: 12px;
-    cursor: pointer;
-    background: #fff;
-    transition: border-color 0.18s, background 0.18s;
-  }
-  .opt:hover { border-color: var(--yellow-light); background: var(--yellow-pale); }
+  .opt { display: flex; align-items: center; gap: 11px; padding: 12px 15px; border: 1.5px solid var(--line); border-radius: 12px; cursor: pointer; background: #fff; transition: border-color 0.18s, background 0.18s; }
+  .opt:hover { border-color: var(--yellow); background: var(--yellow-pale); }
   .opt input { position: absolute; opacity: 0; pointer-events: none; }
-  .opt-dot {
-    width: 19px; height: 19px; border-radius: 50%;
-    border: 2px solid #D8C8A0; flex-shrink: 0;
-    position: relative; transition: border-color 0.18s;
-  }
-  .opt-dot::after {
-    content: ""; position: absolute; inset: 3px;
-    border-radius: 50%; background: var(--yellow);
-    transform: scale(0); transition: transform 0.18s;
-  }
-  .opt.selected { border-color: var(--yellow); background: var(--yellow-pale); }
-  .opt.selected .opt-dot { border-color: var(--yellow); }
+  .opt-dot { width: 19px; height: 19px; border-radius: 50%; border: 2px solid #D8C098; flex-shrink: 0; position: relative; transition: border-color 0.18s; }
+  .opt-dot::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--yellow); transform: scale(0); transition: transform 0.18s; }
+  .opt.selected { border-color: var(--yellow-deep); background: var(--yellow-pale); }
+  .opt.selected .opt-dot { border-color: var(--yellow-deep); }
   .opt.selected .opt-dot::after { transform: scale(1); }
-  .opt-text { font-size: 14.5px; color: var(--dark); line-height: 1.5; }
-
-  /* Scale (台語能力) */
+  .opt-text { font-size: 14.5px; color: var(--brown); line-height: 1.5; }
   .scale-wrap { display: flex; flex-direction: column; gap: 9px; }
-  .scale-btn {
-    display: flex; align-items: center; gap: 11px;
-    padding: 12px 15px;
-    border: 1.5px solid var(--line);
-    border-radius: 12px;
-    cursor: pointer;
-    background: #fff;
-    transition: border-color 0.18s, background 0.18s;
-  }
-  .scale-btn:hover { border-color: var(--yellow-light); background: var(--yellow-pale); }
+  .scale-btn { display: flex; align-items: center; gap: 11px; padding: 12px 15px; border: 1.5px solid var(--line); border-radius: 12px; cursor: pointer; background: #fff; transition: border-color 0.18s, background 0.18s; }
+  .scale-btn:hover { border-color: var(--yellow); background: var(--yellow-pale); }
   .scale-btn input { position: absolute; opacity: 0; pointer-events: none; }
-  .scale-circle-dot {
-    width: 19px; height: 19px; border-radius: 50%;
-    border: 2px solid #D8C8A0; flex-shrink: 0;
-    position: relative; transition: border-color 0.18s;
-  }
-  .scale-circle-dot::after {
-    content: ""; position: absolute; inset: 3px;
-    border-radius: 50%; background: var(--yellow);
-    transform: scale(0); transition: transform 0.18s;
-  }
-  .scale-btn.selected { border-color: var(--yellow); background: var(--yellow-pale); }
-  .scale-btn.selected .scale-circle-dot { border-color: var(--yellow); }
-  .scale-btn.selected .scale-circle-dot::after { transform: scale(1); }
-  .scale-text { font-size: 14.5px; color: var(--dark); line-height: 1.5; }
-
-  /* Payment info */
-  .payment-info {
-    margin: 12px 20px 0;
-    background: #3A3020;
-    color: #FDF5D8;
-    border-radius: 16px;
-    padding: 20px 22px;
-    font-size: 14px;
-    line-height: 1.9;
-  }
-  .payment-info h3 { margin: 0 0 10px; font-size: 16.5px; color: #E8C840; }
-  .payment-info a { color: #E8C840; }
-  .payment-bank {
-    margin-top: 14px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    padding: 12px 16px;
-    font-size: 13.5px;
-  }
-
-  /* Error */
+  .scale-dot { width: 19px; height: 19px; border-radius: 50%; border: 2px solid #D8C098; flex-shrink: 0; position: relative; transition: border-color 0.18s; }
+  .scale-dot::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--yellow); transform: scale(0); transition: transform 0.18s; }
+  .scale-btn.selected { border-color: var(--yellow-deep); background: var(--yellow-pale); }
+  .scale-btn.selected .scale-dot { border-color: var(--yellow-deep); }
+  .scale-btn.selected .scale-dot::after { transform: scale(1); }
+  .scale-text { font-size: 14.5px; color: var(--brown); line-height: 1.5; }
   .error-msg { color: var(--coral); font-size: 12.5px; margin-top: 8px; display: none; font-weight: 700; }
   .card.invalid { border-color: var(--coral); }
   .card.invalid .error-msg { display: block; }
-
-  /* Buttons */
   .btn-wrap { margin: 20px 20px 0; }
-  .btn-next, .btn-submit {
-    width: 100%;
-    background: #3A3020;
-    color: #E8C840;
-    border: none;
-    border-radius: 14px;
-    padding: 16px;
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: opacity 0.15s;
-  }
-  .btn-next:hover, .btn-submit:hover { opacity: 0.85; }
-  .btn-back {
-    width: 100%;
-    background: transparent;
-    color: var(--dark-soft);
-    border: 1.5px solid var(--line);
-    border-radius: 14px;
-    padding: 13px;
-    font-size: 14.5px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: border-color 0.18s;
-  }
+  .btn-next,.btn-submit { width: 100%; background: var(--yellow); color: var(--dark); border: none; border-radius: 14px; padding: 16px; font-size: 16px; font-weight: 900; cursor: pointer; box-shadow: 0 6px 18px -6px rgba(212,168,42,0.5); transition: transform 0.12s; }
+  .btn-next:hover,.btn-submit:hover { transform: translateY(-1px); }
+  .btn-back { width: 100%; background: transparent; color: var(--brown-soft); border: 1.5px solid var(--line); border-radius: 14px; padding: 13px; font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 10px; transition: border-color 0.18s; }
   .btn-back:hover { border-color: var(--yellow); color: var(--yellow-deep); }
   .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  /* Success */
-  .success-screen { display: none; text-align: center; padding: 60px 30px; }
-  .success-screen.show { display: block; }
-  .success-icon { width: 84px; height: 84px; margin: 0 auto 22px; }
-  .success-screen h2 { font-size: 22px; color: var(--yellow-deep); margin: 0 0 10px; }
-  .success-screen p { font-size: 14.5px; color: var(--dark-soft); line-height: 1.8; }
-
-  /* Pages */
+  .payment-info { margin: 12px 20px 0; background: var(--dark); color: #FDF6DC; border-radius: 16px; padding: 20px 22px; font-size: 14.5px; line-height: 1.9; }
+  .payment-info h3 { margin: 0 0 10px; font-size: 17px; color: var(--yellow-light); }
+  .payment-info a { color: var(--yellow-light); }
+  .payment-bank { margin-top: 14px; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 12px 16px; font-size: 13.5px; }
   .page { display: none; }
   .page.active { display: block; }
-
-  @media (max-width: 420px) {
-    .card { padding: 18px 16px; margin: 10px 14px 0; }
-    .section-head { margin: 20px 14px 0; }
-    .btn-wrap { margin: 16px 14px 0; }
-    .payment-info { margin: 10px 14px 0; }
-    .notice, .product-block, .instructor-block { margin-left: 14px; margin-right: 14px; }
-    .progress-wrap { margin: 12px 14px 0; }
-  }
+  .success-screen { display: none; text-align: center; padding: 60px 30px; }
+  .success-screen.show { display: block; }
+  .success-icon { width: 80px; height: 80px; margin: 0 auto 20px; }
+  .success-screen h2 { font-size: 22px; color: var(--yellow-deep); margin: 0 0 10px; }
+  .success-screen p { font-size: 15px; color: var(--brown-soft); line-height: 1.85; }
+  @media(max-width:420px){.card{padding:18px 16px;margin:10px 14px 0}.section-head{margin:20px 14px 0}.btn-wrap{margin:16px 14px 0}.payment-info{margin:10px 14px 0}.poster,.product{padding:0 14px}.notice,.instructor-block{margin:16px 14px 0}.progress-wrap{margin:12px 14px 0}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- ===== PAGE 1 活動介紹 ===== -->
-  <div class="page active" id="page1">
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <div class="banner"><img src="banner.png" alt="笑咍咍台羅營2027 後驛行踏"></div>
 
-    <div class="banner">
-      <img src="banner.png" alt="笑咍咍台羅營2027 後驛行踏">
-    </div>
-
-    <div class="intro">
-      <h2>笑咍咍台羅營2027 後驛行踏</h2>
-      <p><strong>🗓️ 營隊時間</strong><br>
-      初階班：2027/01/28（拜四）– 01/29（拜五）<br>
-      進階班：2027/02/01（拜一）– 02/02（拜二）<br>
-      時間：09:00 - 17:00</p>
-      <p><strong>👶 建議年齡：</strong>5 – 12 歲囡仔</p>
-      <p><strong>📍 地點：</strong>樂暢親子共學空間（台北市大同區長安西路78巷4弄5號2樓）</p>
-      <p><strong>👥 精緻小班制：</strong>10 人即成班，14 人滿班額滿</p>
-      <p><strong>💰 活動費用</strong><br>
+  <div class="intro">
+    <h2>笑咍咍台羅營2027<br>後驛行踏 報名表</h2>
+    <p><strong>🗓 初階班：</strong>2027/01/28（拜四）– 01/29（拜五）<br>
+    <strong>🗓 進階班：</strong>2027/02/01（拜一）– 02/02（拜二）<br>
+    <strong>⏰ 時間：</strong>09:00 - 17:00<br>
+    <strong>👶 建議年齡：</strong>5–12 歲囡仔<br>
+    <strong>📍 地點：</strong>樂暢親子共學空間（台北市大同區長安西路78巷4弄5號2樓）<br>
+    <strong>👥 精緻小班制：</strong>10人即成班，14人滿班</p>
+    <div class="fee-box">
+      <div class="fee-main">💰 活動費用</div>
       原價：$9,800／人（含每日中晝頓、平安保險與課程材料）<br>
-      早鳥：$8,500／人<br>
-      舊生專屬優待：折 -500 箍<br>
-      雙人同行：折 -250 箍/人<br>
-      🔥 <strong>優待會使做伙使用！舊生+早鳥最高 $8,000！</strong></p>
-      <p><strong>💡 活動說明</strong><br>
-      全台語浸水式台羅主題營隊，透過認路、tshuē 路、畫地圖，分配預算、算錢，培養孩子解決問題的能力，練習溝通協調佮團體合作。</p>
-      <p><strong>📌 分級說明</strong><br>
-      ⭐️ 初階：有聽、講台語基礎，願意佇活動kah歇睏ê時間使用台語。<br>
-      ⭐️⭐️ 進階：看「笑咍咍」字卡，會使唸出聲母、韻母，嘛有法度拼音。<br>
-      ✅ 完整參加可以得到專屬課程證書。</p>
-      <p>🌟 初階、進階攏愛使用「笑咍咍台語發音玲瑯盒仔」大卡。<br>
-      🌟 初階學員需要準備笑咍咍字帖、白枋筆。<br>
-      🌟 半工佇外口、半工佇教室。</p>
+      🔥 早鳥：$8,500／人<br>
+      🔥 舊生專屬優待：折 -500 箍<br>
+      🔥 雙人同行：折 -250 箍／人<br>
+      <strong style="color:var(--yellow-light);">舊生報名加早鳥，最高享優惠價 8,000 箍！優待會使做伙使用</strong>
     </div>
-
-    <!-- 講師介紹 -->
-    <div class="instructor-block">
-      <div class="instructor-title">💕✨ 講師紹介 ✨💕</div>
-      <div class="instructor-card">
-        <div class="instructor-name">👍 蔡秋芬 老師</div>
-        <div class="instructor-history">
-          教育部閩南語認證專業級<br>
-          成大台語認證專業級<br>
-          十五年兒美教學經驗<br>
-          九年台語故事人經驗<br>
-          2023新竹市閩南語字音字形社會組第一名<br>
-          2023新竹市複賽閩南語朗讀國中組第一名指導老師<br>
-          2023國賽優等閩南語朗讀國中組指導老師<br>
-          2024新竹市台語字音字形社會組第一名<br>
-          2025新竹市社會組字音字形優等<br>
-          2026新竹市社會組字音字形特優<br>
-          2026新竹市台語情境式演說高中組特優指導老師<br>
-          台文作品散見於閩南語國賽文章、台文戰線、臺江臺文期刊、海翁台文月刊、罔報、台客詩刊、笠詩刊等。<br><br>
-          <strong>現任：</strong><br>
-          新竹市竹松社大台語/繪本講師<br>
-          新竹市本土語推廣協會理事<br>
-          新竹市國中小學台語老師<br>
-          親子館台語繪本講師<br>
-          幼兒園母語諮詢專家
-        </div>
-      </div>
-    </div>
-
-    <!-- 注意事項 + 教材確認 -->
-    <div class="notice" style="padding-bottom: 16px;">
-      <strong>🧡✨ 報名進前愛注意的代誌 ✨🧡</strong><br><br>
-      ▸ 營隊為規工ê活動。<br>
-      ▸ 報名費用包括每日中晝頓、平安保險與課程材料。<br>
-      ▸ 報名了後臨時無法度參加，會當揣代課，課程不退費。<br>
-      ▸ 上早工作室有人的時間：08:45<br>
-      ▸ 上晏工作室下班的時間：18:00<br>
-      ▸ 課程中會使用「笑咍咍台語發音玲瑯盒仔」教材，參加者需要家己攢好。<br>
-      ▸ 報名成功了後需要買教材，會使私訊領限量優待，無限金額，一單扣520箍。
-      <div style="margin-top:16px; border-top:1px solid rgba(160,120,16,0.25); padding-top:14px;">
-        <div style="font-size:15px; font-weight:800; color:var(--yellow-deep); margin-bottom:10px;">教材確認</div>
-        <div class="options" data-name="entry.637709241" data-type="radio">
-          <label class="opt" style="background:rgba(255,255,255,0.7);"><input type="radio" name="entry.637709241" value="已經有教材, 你OK，我OK，逐家攏OK！"><span class="opt-dot"></span><span class="opt-text" style="font-weight:700;">已經有教材，你OK，我OK，逐家攏OK！</span></label>
-          <label class="opt" style="background:rgba(255,255,255,0.7);"><input type="radio" name="entry.637709241" value="無教材，請予我折扣號碼"><span class="opt-dot"></span><span class="opt-text" style="font-weight:700;">無教材，請予我折扣號碼</span></label>
-        </div>
-      </div>
-    </div>
-
-    <!-- 商品圖 -->
-    <div class="product-block">
-      <img src="product.png" alt="笑咍咍台語發音玲瑯盒仔">
-    </div>
-
-    <div class="btn-wrap">
-      <button type="button" class="btn-next" onclick="goToPage2()">開始報名 →</button>
-    </div>
-
+    <p style="margin-top:14px;">💡 全台語浸水式台羅主題營隊<br>
+    透過認路、tshuē 路、畫地圖；分配預算、算錢，培養孩子解決問題的能力。佇咧買物件盤 nuá 的過程中，練習溝通協調佮團體合作。</p>
+    <p>🌟 初階、進階攏愛使用「笑咍咍台語發音玲瑯盒仔」大卡<br>
+    🌟 初階學員需要準備笑咍咍字帖、白枋筆<br>
+    🌟 半工佇外口、半工佇教室</p>
+    <p>📌 <strong>分級說明</strong><br>
+    ⭐️ <strong>初階：</strong>有聽、講台語基礎，願意佇活動kah歇睏 ê 時間使用台語。<br>
+    ⭐️⭐️ <strong>進階：</strong>看「笑咍咍」字卡，會使唸出聲母、韻母，嘛有法度拼音。<br>
+    完整參加活動會使得到專屬ê課程證書。</p>
   </div>
 
-  <!-- ===== PAGE 2 報名資料 ===== -->
-  <div class="page" id="page2">
+  <div class="poster"><img src="poster.png" alt="後驛行踏活動海報"></div>
 
-    <div class="banner">
-      <img src="banner.png" alt="笑咍咍台羅營2027 後驛行踏">
+  <div class="instructor-block">
+    <div class="instructor-title">💕✨ 講師紹介 ✨💕</div>
+    <div class="instructor-card">
+      <div class="instructor-name">👍 蔡秋芬 老師</div>
+      <div class="instructor-history">
+        教育部閩南語認證專業級<br>成大台語認證專業級<br>十五年兒美教學經驗<br>九年台語故事人經驗<br>
+        2023新竹市閩南語字音字形社會組第一名<br>2023新竹市複賽閩南語朗讀國中組第一名指導老師<br>
+        2023國賽優等閩南語朗讀國中組指導老師<br>2024新竹市台語字音字形社會組第一名<br>
+        2025新竹市社會組字音字形優等<br>2026新竹市社會組字音字形特優<br>
+        2026新竹市台語情境式演說高中組特優指導老師<br>
+        台文作品散見於閩南語國賽文章、台文戰線、臺江臺文期刊、海翁台文月刊、罔報、台客詩刊、笠詩刊等。<br><br>
+        <strong>現任：</strong><br>
+        新竹市竹松社大台語／繪本講師<br>新竹市本土語推廣協會理事<br>新竹市國中小學台語老師<br>親子館台語繪本講師<br>幼兒園母語諮詢專家
+      </div>
     </div>
-
-    <div class="page-indicator">
-      <div class="page-dot"></div>
-      <div class="page-dot active"></div>
-      <div class="page-dot"></div>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill2"></div></div>
-      <div class="progress-label" id="progressLabel2">0 / 18</div>
-    </div>
-
-    <div class="section-head">📋 報名資料</div>
-
-    <form id="form2">
-
-      <!-- 家長姓名 -->
-      <div class="card" data-q="q1">
-        <div class="q-title">家長姓名<span class="req">*</span></div>
-        <input type="text" name="entry.352761367" placeholder="請填寫家長姓名">
-        <div class="error-msg">請填寫家長姓名</div>
-      </div>
-
-      <!-- Line名 -->
-      <div class="card" data-q="q2">
-        <div class="q-title">Line名<span class="req">*</span></div>
-        <input type="text" name="entry.759206700" placeholder="請填寫 LINE 顯示名稱">
-        <div class="error-msg">請填寫 LINE 名稱</div>
-      </div>
-
-      <!-- 聯絡電話 -->
-      <div class="card" data-q="q3">
-        <div class="q-title">聯絡電話<span class="req">*</span></div>
-        <input type="text" name="entry.1334397044" placeholder="請填寫聯絡電話">
-        <div class="error-msg">請填寫聯絡電話</div>
-      </div>
-
-      <!-- 聯絡 email -->
-      <div class="card" data-q="q4">
-        <div class="q-title">聯絡 e-mail<span class="req">*</span></div>
-        <input type="email" name="entry.1692922811" placeholder="your@email.com">
-        <div class="error-msg">請填寫電子郵件</div>
-      </div>
-
-      <!-- 欲報佗一班 -->
-      <div class="card" data-q="q5">
-        <div class="q-title">欲報佗一班<span class="req">*</span></div>
-        <div class="q-sub">一人一班一張表單</div>
-        <div class="options" data-name="entry.539188410" data-type="radio">
-          <label class="opt"><input type="radio" name="entry.539188410" value="初階"><span class="opt-dot"></span><span class="opt-text">⭐️ 初階（01/28–01/29）</span></label>
-          <label class="opt"><input type="radio" name="entry.539188410" value="進階"><span class="opt-dot"></span><span class="opt-text">⭐️⭐️ 進階（02/01–02/02）</span></label>
-        </div>
-        <div class="error-msg">請選擇班級</div>
-      </div>
-
-      <!-- 囡仔的名 -->
-      <div class="card" data-q="q6">
-        <div class="q-title">囡仔的名<span class="req">*</span></div>
-        <div class="q-sub">一人一張表單</div>
-        <input type="text" name="entry.1009712280" placeholder="請填寫孩子姓名">
-        <div class="error-msg">請填寫囡仔的名</div>
-      </div>
-
-      <!-- 囡仔佇厝裡慣勢叫的名 -->
-      <div class="card" data-q="q7">
-        <div class="q-title">囡仔佇厝裡慣勢叫的名<span class="req">*</span></div>
-        <div class="q-sub">會作名牌、請寫厝裡慣勢叫的名（漢字+台羅），若無，寫完整的名就會使</div>
-        <input type="text" name="entry.1221697209" placeholder="例：小明 Siáu-bîng">
-        <div class="error-msg">請填寫慣勢叫的名</div>
-      </div>
-
-      <!-- 囡仔的年歲 -->
-      <div class="card" data-q="q8">
-        <div class="q-title">囡仔的年歲<span class="req">*</span></div>
-        <input type="text" name="entry.487100564" placeholder="例：8歲">
-        <div class="error-msg">請填寫年歲</div>
-      </div>
-
-      <!-- 同行優待 -->
-      <div class="card" data-q="q9">
-        <div class="q-title">同行優待請填寫另外一个囡仔的名<span class="req">*</span></div>
-        <div class="q-sub">樂暢驗證優惠，一个人報名就寫「無」</div>
-        <input type="text" name="entry.323396176" placeholder="另一位囡仔的名，或填「無」">
-        <div class="error-msg">請填寫（如無則填「無」）</div>
-      </div>
-
-      <!-- 台語能力－聽 -->
-      <div class="card" data-q="q10">
-        <div class="q-title">囡仔的台語能力－聽<span class="req">*</span></div>
-        <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
-        <div class="scale-wrap" data-name="entry.700828325" data-type="scale">
-          <label class="scale-btn" data-val="1 Phu-looh--ê"><input type="radio" name="entry.700828325" value="1 Phu-looh--ê"><span class="scale-circle-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
-          <label class="scale-btn" data-val="2"><input type="radio" name="entry.700828325" value="2"><span class="scale-circle-dot"></span><span class="scale-text">2</span></label>
-          <label class="scale-btn" data-val="3"><input type="radio" name="entry.700828325" value="3"><span class="scale-circle-dot"></span><span class="scale-text">3</span></label>
-          <label class="scale-btn" data-val="4"><input type="radio" name="entry.700828325" value="4"><span class="scale-circle-dot"></span><span class="scale-text">4</span></label>
-          <label class="scale-btn" data-val="5 攏聽無的可能無法度參加"><input type="radio" name="entry.700828325" value="5 攏聽無的可能無法度參加"><span class="scale-circle-dot"></span><span class="scale-text">5 攏聽無的可能無法度參加</span></label>
-        </div>
-        <div class="error-msg">請給予評分</div>
-      </div>
-
-      <!-- 台語能力－講 -->
-      <div class="card" data-q="q11">
-        <div class="q-title">囡仔的台語能力－講<span class="req">*</span></div>
-        <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
-        <div class="scale-wrap" data-name="entry.784575573" data-type="scale">
-          <label class="scale-btn" data-val="1 Phu-looh--ê"><input type="radio" name="entry.784575573" value="1 Phu-looh--ê"><span class="scale-circle-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
-          <label class="scale-btn" data-val="2"><input type="radio" name="entry.784575573" value="2"><span class="scale-circle-dot"></span><span class="scale-text">2</span></label>
-          <label class="scale-btn" data-val="3"><input type="radio" name="entry.784575573" value="3"><span class="scale-circle-dot"></span><span class="scale-text">3</span></label>
-          <label class="scale-btn" data-val="4"><input type="radio" name="entry.784575573" value="4"><span class="scale-circle-dot"></span><span class="scale-text">4</span></label>
-          <label class="scale-btn" data-val="5 營隊期間，請盡量講台語，維護台語環境。"><input type="radio" name="entry.784575573" value="5 營隊期間，請盡量講台語，維護台語環境。"><span class="scale-circle-dot"></span><span class="scale-text">5 營隊期間，請盡量講台語，維護台語環境。</span></label>
-        </div>
-        <div class="error-msg">請給予評分</div>
-      </div>
-
-      <!-- 台語能力－讀 -->
-      <div class="card" data-q="q12">
-        <div class="q-title">囡仔的台語能力－讀<span class="req">*</span></div>
-        <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
-        <div class="scale-wrap" data-name="entry.1324139761" data-type="scale">
-          <label class="scale-btn" data-val="1 Phu-looh--ê"><input type="radio" name="entry.1324139761" value="1 Phu-looh--ê"><span class="scale-circle-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
-          <label class="scale-btn" data-val="2"><input type="radio" name="entry.1324139761" value="2"><span class="scale-circle-dot"></span><span class="scale-text">2</span></label>
-          <label class="scale-btn" data-val="3"><input type="radio" name="entry.1324139761" value="3"><span class="scale-circle-dot"></span><span class="scale-text">3</span></label>
-          <label class="scale-btn" data-val="4"><input type="radio" name="entry.1324139761" value="4"><span class="scale-circle-dot"></span><span class="scale-text">4</span></label>
-          <label class="scale-btn" data-val="5 袂曉嘛無要緊,老師對頭開始教"><input type="radio" name="entry.1324139761" value="5 袂曉嘛無要緊,老師對頭開始教"><span class="scale-circle-dot"></span><span class="scale-text">5 袂曉嘛無要緊，老師對頭開始教</span></label>
-        </div>
-        <div class="error-msg">請給予評分</div>
-      </div>
-
-      <!-- 台語能力－寫 -->
-      <div class="card" data-q="q13">
-        <div class="q-title">囡仔的台語能力－寫<span class="req">*</span></div>
-        <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
-        <div class="scale-wrap" data-name="entry.883715943" data-type="scale">
-          <label class="scale-btn" data-val="1 Phu-looh--ê"><input type="radio" name="entry.883715943" value="1 Phu-looh--ê"><span class="scale-circle-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
-          <label class="scale-btn" data-val="2"><input type="radio" name="entry.883715943" value="2"><span class="scale-circle-dot"></span><span class="scale-text">2</span></label>
-          <label class="scale-btn" data-val="3"><input type="radio" name="entry.883715943" value="3"><span class="scale-circle-dot"></span><span class="scale-text">3</span></label>
-          <label class="scale-btn" data-val="4"><input type="radio" name="entry.883715943" value="4"><span class="scale-circle-dot"></span><span class="scale-text">4</span></label>
-          <label class="scale-btn" data-val="5 袂曉嘛無要緊,老師對頭開始教"><input type="radio" name="entry.883715943" value="5 袂曉嘛無要緊,老師對頭開始教"><span class="scale-circle-dot"></span><span class="scale-text">5 袂曉嘛無要緊，老師對頭開始教</span></label>
-        </div>
-        <div class="error-msg">請給予評分</div>
-      </div>
-
-      <!-- 敢有參加過樂暢營隊 -->
-      <div class="card" data-q="q14">
-        <div class="q-title">敢有參加過樂暢ê營隊？<span class="req">*</span></div>
-        <div class="q-sub">舊生有優待</div>
-        <div class="options" data-name="entry.1748355618" data-type="radio">
-          <label class="opt"><input type="radio" name="entry.1748355618" value="有"><span class="opt-dot"></span><span class="opt-text">有</span></label>
-          <label class="opt"><input type="radio" name="entry.1748355618" value="無"><span class="opt-dot"></span><span class="opt-text">無</span></label>
-        </div>
-        <div class="error-msg">請選擇一個選項</div>
-      </div>
-
-      <!-- 自理能力 -->
-      <div class="card" data-q="q15">
-        <div class="q-title">自理能力<span class="req">*</span></div>
-        <div class="options" data-name="entry.262347097" data-type="radio">
-          <label class="opt"><input type="radio" name="entry.262347097" value="有法度家己參與營隊"><span class="opt-dot"></span><span class="opt-text">有法度家己參與營隊</span></label>
-          <label class="opt"><input type="radio" name="entry.262347097" value="需要部分協助(請填特殊需求抑是愛注意的代誌)"><span class="opt-dot"></span><span class="opt-text">需要部分協助（請填特殊需求抑是愛注意的代誌）</span></label>
-        </div>
-        <div class="error-msg">請選擇一個選項</div>
-      </div>
-
-      <!-- 特殊需求 -->
-      <div class="card" data-q="q16">
-        <div class="q-title">特殊需求抑是愛注意的代誌<span class="req">*</span></div>
-        <textarea class="q-text" name="entry.327527014" placeholder="如無則填「無」"></textarea>
-        <div class="error-msg">請填寫（如無則填「無」）</div>
-      </div>
-
-      <!-- 囡仔的生日 -->
-      <div class="card" data-q="q17">
-        <div class="q-title">囡仔的生日<span class="req">*</span></div>
-        <div class="q-sub">辦理保險用</div>
-        <input type="date" name="entry.1148142350">
-        <div class="error-msg">請選擇生日</div>
-      </div>
-
-      <!-- 身分證字號 -->
-      <div class="card" data-q="q18">
-        <div class="q-title">囡仔的身分證字號<span class="req">*</span></div>
-        <div class="q-sub">辦理保險用</div>
-        <input type="text" name="entry.1187663885" placeholder="請填寫身分證字號">
-        <div class="error-msg">請填寫身分證字號</div>
-      </div>
-
-      <!-- 飲食調查 -->
-      <div class="card" data-q="q19">
-        <div class="q-title">飲食調查<span class="req">*</span></div>
-        <div class="q-sub">食材過敏請一定愛特別註明</div>
-        <div class="options" data-name="entry.1885354714" data-type="radio">
-          <label class="opt"><input type="radio" name="entry.1885354714" value="葷"><span class="opt-dot"></span><span class="opt-text">葷</span></label>
-          <label class="opt"><input type="radio" name="entry.1885354714" value="素"><span class="opt-dot"></span><span class="opt-text">素</span></label>
-        </div>
-        <div style="margin-top:10px;">
-          <input type="text" name="entry.1885354714_other" placeholder="其他（過敏食材或特殊需求請填寫）" id="diet_other">
-        </div>
-        <div class="error-msg">請選擇飲食調查</div>
-      </div>
-
-      <div class="btn-wrap">
-        <button type="button" class="btn-next" onclick="goToPage3()">繼續 → 填寫匯款資料</button>
-      </div>
-      <div class="btn-wrap" style="margin-top:10px;">
-        <button type="button" class="btn-back" onclick="goToPage1()">← 返回活動介紹</button>
-      </div>
-
-    </form>
   </div>
 
-  <!-- ===== PAGE 3 匯款資料 ===== -->
-  <div class="page" id="page3">
-
-    <div class="banner">
-      <img src="banner.png" alt="笑咍咍台羅營2027 後驛行踏">
-    </div>
-
-    <div class="page-indicator">
-      <div class="page-dot"></div>
-      <div class="page-dot"></div>
-      <div class="page-dot active"></div>
-    </div>
-    <div class="progress-wrap">
-      <div class="progress-bar"><div class="progress-fill" id="progressFill3"></div></div>
-      <div class="progress-label" id="progressLabel3">0 / 6</div>
-    </div>
-
-    <div class="section-head">💳 匯款資料</div>
-
-    <div class="payment-info">
-      <h3>匯款注意</h3>
-      請加我們的 <a href="https://lin.ee/jqY7HN9j?openExternalBrowser=1" target="_blank">官方LINE</a> 後，傳「2027後驛行踏 + 囡仔的名 + 你的本名」<br><br>
-      先匯款，再填單，對數了後會用 email 通知，才算是完成報名程序喔！
-      <div class="payment-bank">
-        匯款銀行：807 永豐銀行 建成分行<br>
-        匯款口座：103-018-2001859-7<br>
-        戶名：樂暢空間工作室
+  <div class="notice">
+    <strong>🧡✨ 報名進前愛注意的代誌 ✨🧡</strong><br><br>
+    ▸ 營隊為規工 ê 活動。<br>
+    ▸ 報名費用包括每日中晝頓、平安保險與課程材料。<br>
+    ▸ 報名了後臨時無法度參加，會當揣代課，課程不退費。<br>
+    ▸ 上早工作室有人的時間：08:45<br>
+    ▸ 上晏工作室下班的時間：18:00<br>
+    ▸ 課程中會使用「笑咍咍台語發音玲瑯盒仔」教材，參加者需要家己攢好。<br>
+    ▸ 報名成功了後需要買教材，會使私訊領限量優待，無限金額，一單扣520箍。<br><br>
+    <strong style="color:var(--yellow-light);">教材確認</strong>
+    <div style="margin-top:10px;">
+      <div class="options" data-name="entry.637709241" data-type="radio">
+        <label class="opt" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.2);">
+          <input type="radio" name="entry.637709241" value="已經有教材, 你OK，我OK，逐家攏OK！">
+          <span class="opt-dot"></span><span class="opt-text" style="color:#FDF6DC;">已經有教材，你OK，我OK，逐家攏OK！</span>
+        </label>
+        <label class="opt" style="background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.2);">
+          <input type="radio" name="entry.637709241" value="無教材，請予我折扣號碼">
+          <span class="opt-dot"></span><span class="opt-text" style="color:#FDF6DC;">無教材，請予我折扣號碼</span>
+        </label>
       </div>
     </div>
-
-    <form id="form3">
-
-      <!-- 匯了多少錢 -->
-      <div class="card" data-q="p1">
-        <div class="q-title">匯了多少錢？<span class="req">*</span></div>
-        <div class="q-sub">
-          ⭐️ 初階 / ⭐️⭐️ 進階 原價：$9,800／人<br>
-          早鳥：$8,500／人<br>
-          舊生專屬優待：折 -500 箍<br>
-          雙人同行：折 -250 箍/人<br>
-          舊生+早鳥最高享優惠價 $8,000！
-        </div>
-        <input type="text" name="entry.757573260" placeholder="例：8500">
-        <div class="error-msg">請填寫匯款金額</div>
-      </div>
-
-      <!-- 匯款銀行代碼 -->
-      <div class="card" data-q="p2">
-        <div class="q-title">匯款銀行代碼<span class="req">*</span></div>
-        <div class="q-sub">例：永豐銀行 807</div>
-        <input type="text" name="entry.331518524" placeholder="銀行名稱＋代碼">
-        <div class="error-msg">請填寫匯款銀行代碼</div>
-      </div>
-
-      <!-- 匯款口座尾五碼 -->
-      <div class="card" data-q="p3">
-        <div class="q-title">匯款口座尾五碼<span class="req">*</span></div>
-        <div class="q-sub">是寄金簿仔頂的口座尾五碼，無是提款卡頂的數字哦～</div>
-        <input type="text" name="entry.118636844" placeholder="口座尾五碼">
-        <div class="error-msg">請填寫口座尾五碼</div>
-      </div>
-
-      <!-- 匯款日期 -->
-      <div class="card" data-q="p4">
-        <div class="q-title">匯款日期<span class="req">*</span></div>
-        <input type="date" name="entry.54730791">
-        <div class="error-msg">請選擇匯款日期</div>
-      </div>
-
-      <!-- 肖像授權 -->
-      <div class="card" data-q="p5">
-        <div class="q-title">肖像授權同意事項<span class="req">*</span></div>
-        <div class="q-sub">
-          • 本次課程可能安排拍照或錄影，紀錄教學過程<br>
-          • 影像僅用於工作室社群行銷、補助結案報告及成果展示<br>
-          • 不作其他商業用途，不轉售予第三方<br>
-          • 如不同意入鏡，可於活動期間全程戴口罩，或隨時向工作室提出處理
-        </div>
-        <div class="options" data-name="entry.1092874658" data-type="radio">
-          <label class="opt"><input type="radio" name="entry.1092874658" value="同意授權"><span class="opt-dot"></span><span class="opt-text">同意授權</span></label>
-          <label class="opt"><input type="radio" name="entry.1092874658" value="不想露臉，願意全程戴口罩"><span class="opt-dot"></span><span class="opt-text">不想露臉，願意全程戴口罩</span></label>
-          <label class="opt"><input type="radio" name="entry.1092874658" value="不同意授權(僅供內部教學紀錄使用)"><span class="opt-dot"></span><span class="opt-text">不同意授權（僅供內部教學紀錄使用）</span></label>
-        </div>
-        <div class="error-msg">請選擇一個選項</div>
-      </div>
-
-      <!-- 留言 -->
-      <div class="card" data-q="p6">
-        <div class="q-title">留言<span class="req">*</span></div>
-        <div class="q-sub">想要對老師說的話，對活動的期待⋯⋯</div>
-        <textarea class="q-text" name="entry.1473210018" placeholder="請填寫留言（如無則填「無」）"></textarea>
-        <div class="error-msg">請填寫留言（如無則填「無」）</div>
-      </div>
-
-      <div class="btn-wrap">
-        <button type="submit" class="btn-submit" id="submitBtn">送出報名表</button>
-      </div>
-      <div class="btn-wrap" style="margin-top:10px;">
-        <button type="button" class="btn-back" onclick="goToPage2back()">← 返回修改報名資料</button>
-      </div>
-
-    </form>
   </div>
 
-  <!-- Success -->
-  <div class="success-screen" id="successScreen">
-    <svg class="success-icon" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="46" fill="#3A3020"/>
-      <path d="M30 52l14 14 26-30" stroke="#E8C840" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <h2>報名成功！感謝您！</h2>
-    <p>我們收到您的報名資料了 🧡<br>
-    對數了後會用 email 通知您。<br>
-    有任何問題請加入 <a href="https://lin.ee/jqY7HN9j?openExternalBrowser=1" target="_blank" style="color:var(--yellow-deep);font-weight:700;">官方LINE</a> 詢問。<br><br>
-    期待佮您的囡仔一起學台羅！</p>
-  </div>
+  <div class="product"><img src="product.png" alt="笑咍咍台語發音玲瑯盒仔"></div>
 
+  <div class="btn-wrap">
+    <button type="button" class="btn-next" onclick="goToPage2()">開始報名 →</button>
+  </div>
 </div>
 
+<!-- PAGE 2 報名資料 -->
+<div class="page" id="page2">
+  <div class="banner"><img src="banner.png" alt="笑咍咍台羅營2027 後驛行踏"></div>
+  <div class="page-indicator">
+    <div class="page-dot"></div><div class="page-dot active"></div><div class="page-dot"></div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill2"></div></div>
+    <div class="progress-label" id="progressLabel2">0 / 19</div>
+  </div>
+  <div class="section-head">📋 報名資料</div>
+  <form id="form2">
+    <div class="card" data-q="q1"><div class="q-title">家長姓名<span class="req">*</span></div><input type="text" name="entry.352761367" placeholder="請填寫家長姓名"><div class="error-msg">請填寫家長姓名</div></div>
+    <div class="card" data-q="q2"><div class="q-title">Line名<span class="req">*</span></div><input type="text" name="entry.759206700" placeholder="請填寫 LINE 顯示名稱"><div class="error-msg">請填寫 LINE 名稱</div></div>
+    <div class="card" data-q="q3"><div class="q-title">聯絡電話<span class="req">*</span></div><input type="text" name="entry.1334397044" placeholder="請填寫聯絡電話"><div class="error-msg">請填寫聯絡電話</div></div>
+    <div class="card" data-q="q4"><div class="q-title">聯絡 e-mail<span class="req">*</span></div><input type="email" name="entry.1692922811" placeholder="your@email.com"><div class="error-msg">請填寫電子郵件</div></div>
+    <div class="card" data-q="q5">
+      <div class="q-title">欲報佗一班<span class="req">*</span></div>
+      <div class="q-sub">一人一班一張表單</div>
+      <div class="options" data-name="entry.539188410" data-type="radio">
+        <label class="opt"><input type="radio" name="entry.539188410" value="初階"><span class="opt-dot"></span><span class="opt-text">⭐️ 初階（2027/01/28–01/29）</span></label>
+        <label class="opt"><input type="radio" name="entry.539188410" value="進階"><span class="opt-dot"></span><span class="opt-text">⭐️⭐️ 進階（2027/02/01–02/02）</span></label>
+      </div>
+      <div class="error-msg">請選擇班別</div>
+    </div>
+    <div class="card" data-q="q6"><div class="q-title">囡仔的名<span class="req">*</span></div><div class="q-sub">一人一張表單</div><input type="text" name="entry.1009712280" placeholder="請填寫小孩姓名"><div class="error-msg">請填寫小孩姓名</div></div>
+    <div class="card" data-q="q7"><div class="q-title">囡仔佇厝裡慣勢叫的名<span class="req">*</span></div><div class="q-sub">會作名牌、請寫厝裡慣勢叫的名（漢字+台羅），若無，寫完整的名就會使</div><input type="text" name="entry.1221697209" placeholder="例：阿明 a-bîng"><div class="error-msg">請填寫小孩暱稱</div></div>
+    <div class="card" data-q="q8"><div class="q-title">囡仔的年歲<span class="req">*</span></div><input type="text" name="entry.487100564" placeholder="例：8歲"><div class="error-msg">請填寫年齡</div></div>
+    <div class="card" data-q="q9"><div class="q-title">同行優待請填寫另外一个囡仔的名<span class="req">*</span></div><div class="q-sub">樂暢驗證優惠，一个人報名就寫「無」</div><input type="text" name="entry.323396176" placeholder="另一位同行囡仔的名（或填「無」）"><div class="error-msg">請填寫（無同行請填「無」）</div></div>
+    <div class="card" data-q="q10">
+      <div class="q-title">囡仔的台語能力－聽<span class="req">*</span></div>
+      <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
+      <div class="scale-wrap" data-name="entry.700828325" data-type="scale">
+        <label class="scale-btn" data-val="1"><input type="radio" name="entry.700828325" value="1 Phu-looh--ê"><span class="scale-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
+        <label class="scale-btn" data-val="2"><input type="radio" name="entry.700828325" value="2"><span class="scale-dot"></span><span class="scale-text">2</span></label>
+        <label class="scale-btn" data-val="3"><input type="radio" name="entry.700828325" value="3"><span class="scale-dot"></span><span class="scale-text">3</span></label>
+        <label class="scale-btn" data-val="4"><input type="radio" name="entry.700828325" value="4"><span class="scale-dot"></span><span class="scale-text">4</span></label>
+        <label class="scale-btn" data-val="5"><input type="radio" name="entry.700828325" value="5 攏聽無的可能無法度參加"><span class="scale-dot"></span><span class="scale-text">5 攏聽無的可能無法度參加</span></label>
+      </div>
+      <div class="error-msg">請給予評分</div>
+    </div>
+    <div class="card" data-q="q11">
+      <div class="q-title">囡仔的台語能力－講<span class="req">*</span></div>
+      <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
+      <div class="scale-wrap" data-name="entry.784575573" data-type="scale">
+        <label class="scale-btn" data-val="1"><input type="radio" name="entry.784575573" value="1 Phu-looh--ê"><span class="scale-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
+        <label class="scale-btn" data-val="2"><input type="radio" name="entry.784575573" value="2"><span class="scale-dot"></span><span class="scale-text">2</span></label>
+        <label class="scale-btn" data-val="3"><input type="radio" name="entry.784575573" value="3"><span class="scale-dot"></span><span class="scale-text">3</span></label>
+        <label class="scale-btn" data-val="4"><input type="radio" name="entry.784575573" value="4"><span class="scale-dot"></span><span class="scale-text">4</span></label>
+        <label class="scale-btn" data-val="5"><input type="radio" name="entry.784575573" value="5 營隊期間，請盡量講台語，維護台語環境。"><span class="scale-dot"></span><span class="scale-text">5 營隊期間，請盡量講台語，維護台語環境。</span></label>
+      </div>
+      <div class="error-msg">請給予評分</div>
+    </div>
+    <div class="card" data-q="q12">
+      <div class="q-title">囡仔的台語能力－讀<span class="req">*</span></div>
+      <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
+      <div class="scale-wrap" data-name="entry.1324139761" data-type="scale">
+        <label class="scale-btn" data-val="1"><input type="radio" name="entry.1324139761" value="1 Phu-looh--ê"><span class="scale-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
+        <label class="scale-btn" data-val="2"><input type="radio" name="entry.1324139761" value="2"><span class="scale-dot"></span><span class="scale-text">2</span></label>
+        <label class="scale-btn" data-val="3"><input type="radio" name="entry.1324139761" value="3"><span class="scale-dot"></span><span class="scale-text">3</span></label>
+        <label class="scale-btn" data-val="4"><input type="radio" name="entry.1324139761" value="4"><span class="scale-dot"></span><span class="scale-text">4</span></label>
+        <label class="scale-btn" data-val="5"><input type="radio" name="entry.1324139761" value="5 袂曉嘛無要緊，老師對頭開始教"><span class="scale-dot"></span><span class="scale-text">5 袂曉嘛無要緊，老師對頭開始教</span></label>
+      </div>
+      <div class="error-msg">請給予評分</div>
+    </div>
+    <div class="card" data-q="q13">
+      <div class="q-title">囡仔的台語能力－寫<span class="req">*</span></div>
+      <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
+      <div class="scale-wrap" data-name="entry.883715943" data-type="scale">
+        <label class="scale-btn" data-val="1"><input type="radio" name="entry.883715943" value="1 Phu-looh--ê"><span class="scale-dot"></span><span class="scale-text">1 Phu-looh--ê</span></label>
+        <label class="scale-btn" data-val="2"><input type="radio" name="entry.883715943" value="2"><span class="scale-dot"></span><span class="scale-text">2</span></label>
+        <label class="scale-btn" data-val="3"><input type="radio" name="entry.883715943" value="3"><span class="scale-dot"></span><span class="scale-text">3</span></label>
+        <label class="scale-btn" data-val="4"><input type="radio" name="entry.883715943" value="4"><span class="scale-dot"></span><span class="scale-text">4</span></label>
+        <label class="scale-btn" data-val="5"><input type="radio" name="entry.883715943" value="5 袂曉嘛無要緊，老師對頭開始教"><span class="scale-dot"></span><span class="scale-text">5 袂曉嘛無要緊，老師對頭開始教</span></label>
+      </div>
+      <div class="error-msg">請給予評分</div>
+    </div>
+    <div class="card" data-q="q14">
+      <div class="q-title">敢有參加過樂暢 ê 營隊？<span class="req">*</span></div>
+      <div class="q-sub">舊生有優待。舊生定義：至少參加過一擺樂暢歇寒、歇熱營隊之學員。</div>
+      <div class="options" data-name="entry.1748355618" data-type="radio">
+        <label class="opt"><input type="radio" name="entry.1748355618" value="有"><span class="opt-dot"></span><span class="opt-text">有</span></label>
+        <label class="opt"><input type="radio" name="entry.1748355618" value="無"><span class="opt-dot"></span><span class="opt-text">無</span></label>
+      </div>
+      <div class="error-msg">請選擇一個選項</div>
+    </div>
+    <div class="card" data-q="q15">
+      <div class="q-title">自理能力<span class="req">*</span></div>
+      <div class="options" data-name="entry.262347097" data-type="radio">
+        <label class="opt"><input type="radio" name="entry.262347097" value="有法度家己參與營隊"><span class="opt-dot"></span><span class="opt-text">有法度家己參與營隊</span></label>
+        <label class="opt"><input type="radio" name="entry.262347097" value="需要部分協助(請填特殊需求抑是愛注意的代誌)"><span class="opt-dot"></span><span class="opt-text">需要部分協助（請填特殊需求抑是愛注意的代誌）</span></label>
+      </div>
+      <div class="error-msg">請選擇一個選項</div>
+    </div>
+    <div class="card" data-q="q16"><div class="q-title">特殊需求抑是愛注意的代誌<span class="req">*</span></div><textarea class="q-text" name="entry.327527014" placeholder="如無請填「無」"></textarea><div class="error-msg">請填寫（如無請填「無」）</div></div>
+    <div class="card" data-q="q17"><div class="q-title">囡仔的生日<span class="req">*</span></div><div class="q-sub">辦理保險用</div><input type="date" name="entry.1148142350"><div class="error-msg">請填寫生日</div></div>
+    <div class="card" data-q="q18"><div class="q-title">囡仔的身分證字號<span class="req">*</span></div><div class="q-sub">辦理保險用</div><input type="text" name="entry.1187663885" placeholder="請填寫身分證字號"><div class="error-msg">請填寫身分證字號</div></div>
+    <div class="card" data-q="q19">
+      <div class="q-title">飲食調查<span class="req">*</span></div>
+      <div class="q-sub">食材過敏請一定愛特別註明</div>
+      <div class="options" data-name="entry.1885354714" data-type="radio">
+        <label class="opt"><input type="radio" name="entry.1885354714" value="葷"><span class="opt-dot"></span><span class="opt-text">葷</span></label>
+        <label class="opt"><input type="radio" name="entry.1885354714" value="素"><span class="opt-dot"></span><span class="opt-text">素</span></label>
+        <label class="opt"><input type="radio" name="entry.1885354714" value="其他"><span class="opt-dot"></span><span class="opt-text">其他（請在特殊需求欄說明）</span></label>
+      </div>
+      <div class="error-msg">請選擇飲食類型</div>
+    </div>
+    <div class="btn-wrap">
+      <button type="button" class="btn-next" onclick="goToPage3()">繼續 → 填寫匯款資料</button>
+    </div>
+    <div class="btn-wrap" style="margin-top:10px;">
+      <button type="button" class="btn-back" onclick="goToPage1()">← 返回活動介紹</button>
+    </div>
+  </form>
+</div>
+
+<!-- PAGE 3 匯款資料 -->
+<div class="page" id="page3">
+  <div class="banner"><img src="banner.png" alt="笑咍咍台羅營2027 後驛行踏"></div>
+  <div class="page-indicator">
+    <div class="page-dot"></div><div class="page-dot"></div><div class="page-dot active"></div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill3"></div></div>
+    <div class="progress-label" id="progressLabel3">0 / 6</div>
+  </div>
+  <div class="section-head">💳 匯款資料</div>
+  <div class="payment-info">
+    <h3>匯款注意</h3>
+    請加入 <a href="https://lin.ee/jqY7HN9j?openExternalBrowser=1" target="_blank">官方LINE</a> 後，傳「<strong>2027後驛行踏 + 囡仔的名 + 你的本名</strong>」<br><br>
+    先匯款，再填單，對數了後會用 email 通知，才算是完成報名程序喔！
+    <div class="payment-bank">
+      銀行：807 永豐銀行 建成分行<br>
+      匯款口座：103-018-2001859-7<br>
+      戶名：樂暢空間工作室
+    </div>
+  </div>
+  <form id="form3">
+    <div class="card" data-q="p1">
+      <div class="q-title">匯了多少錢？<span class="req">*</span></div>
+      <div class="q-sub">原價：$9,800／人｜早鳥：$8,500／人<br>舊生專屬優待：折 -500 箍｜雙人同行：折 -250 箍／人<br>舊生報名加早鳥，最高享優惠價 8,000 箍！</div>
+      <input type="text" name="entry.757573260" placeholder="例：8500">
+      <div class="error-msg">請填寫匯款金額</div>
+    </div>
+    <div class="card" data-q="p2"><div class="q-title">匯款銀行代碼<span class="req">*</span></div><div class="q-sub">例：永豐銀行 807</div><input type="text" name="entry.331518524" placeholder="銀行名稱＋代碼"><div class="error-msg">請填寫匯款銀行代碼</div></div>
+    <div class="card" data-q="p3"><div class="q-title">匯款口座尾五碼<span class="req">*</span></div><div class="q-sub">是寄金簿仔頂的口座尾五碼，無是提款卡頂的數字哦～</div><input type="text" name="entry.118636844" placeholder="帳號末5碼"><div class="error-msg">請填寫匯款帳號末5碼</div></div>
+    <div class="card" data-q="p4"><div class="q-title">匯款日期<span class="req">*</span></div><input type="date" name="entry.54730791"><div class="error-msg">請選擇匯款日期</div></div>
+    <div class="card" data-q="p5">
+      <div class="q-title">肖像授權同意事項<span class="req">*</span></div>
+      <div class="q-sub">• 本次課程可能安排拍照或錄影，紀錄教學過程<br>• 影像僅用於工作室社群行銷、補助結案報告及成果展示<br>• 不作其他商業用途，不轉售予第三方<br>• 如不同意入鏡，可於活動期間全程戴口罩，或隨時向工作室提出處理</div>
+      <div class="options" data-name="entry.1092874658" data-type="radio">
+        <label class="opt"><input type="radio" name="entry.1092874658" value="同意授權"><span class="opt-dot"></span><span class="opt-text">同意授權</span></label>
+        <label class="opt"><input type="radio" name="entry.1092874658" value="不想露臉，願意全程戴口罩"><span class="opt-dot"></span><span class="opt-text">不想露臉，願意全程戴口罩</span></label>
+        <label class="opt"><input type="radio" name="entry.1092874658" value="不同意授權(僅供內部教學紀錄使用)"><span class="opt-dot"></span><span class="opt-text">不同意授權（僅供內部教學紀錄使用）</span></label>
+      </div>
+      <div class="error-msg">請選擇一個選項</div>
+    </div>
+    <div class="card" data-q="p6"><div class="q-title">留言<span class="req">*</span></div><div class="q-sub">想要對老師說的話，對活動的期待⋯⋯</div><textarea class="q-text" name="entry.1473210018" placeholder="請填寫留言（如無請填「無」）"></textarea><div class="error-msg">請填寫留言（如無請填「無」）</div></div>
+    <div class="btn-wrap">
+      <button type="submit" class="btn-submit" id="submitBtn">送出報名表</button>
+      <button type="button" class="btn-back" onclick="goToPage2back()">← 返回修改報名資料</button>
+    </div>
+  </form>
+</div>
+
+<!-- Success -->
+<div class="success-screen" id="successScreen">
+  <svg class="success-icon" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="46" fill="#2A2520"/>
+    <path d="M30 52l14 14 26-30" stroke="#D4A82A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <h2>報名成功！感謝您！</h2>
+  <p>我們收到您的報名資料了 🧡<br>
+  對數完成後會用 email 通知您。<br>
+  有任何問題請加入 <a href="https://lin.ee/jqY7HN9j?openExternalBrowser=1" target="_blank" style="color:var(--yellow-deep);font-weight:700;">官方LINE</a> 詢問。<br><br>
+  期待和囡仔做伙來學台羅！</p>
+</div>
+
+</div>
 <iframe name="hidden_iframe" style="display:none"></iframe>
-
 <script>
-(function () {
-  const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdYxrjMTvKdC2087W4QI1w7m7o-q-bM2SXmiAeIKmEqc53kFw/formResponse";
+(function(){
+  const FORM_ACTION="https://docs.google.com/forms/d/e/1FAIpQLSdYxrjMTvKdC2087W4QI1w7m7o-q-bM2SXmiAeIKmEqc53kFw/formResponse";
+  let p1Data={}, p2Data={};
 
-  let page2Data = {};
-
-  // Radio
-  document.querySelectorAll('.options[data-type="radio"]').forEach(group => {
-    group.querySelectorAll('.opt').forEach(opt => {
-      opt.addEventListener('click', () => {
-        group.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
-        opt.classList.add('selected');
-        clearError(group.closest('.card'));
+  document.querySelectorAll('.options[data-type="radio"]').forEach(g=>{
+    g.querySelectorAll('.opt').forEach(o=>{
+      o.addEventListener('click',()=>{
+        g.querySelectorAll('.opt').forEach(x=>x.classList.remove('selected'));
+        o.classList.add('selected');
+        clearErr(g.closest('.card'));
         updateProgress();
       });
     });
   });
 
-  // Scale
-  document.querySelectorAll('.scale-wrap[data-type="scale"]').forEach(group => {
-    group.querySelectorAll('.scale-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        group.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
-        btn.classList.add('selected');
-        clearError(group.closest('.card'));
+  document.querySelectorAll('.scale-wrap[data-type="scale"]').forEach(g=>{
+    g.querySelectorAll('.scale-btn').forEach(b=>{
+      b.addEventListener('click',()=>{
+        g.querySelectorAll('.scale-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        clearErr(b.closest('.card'));
         updateProgress();
       });
     });
   });
 
-  // Text inputs
-  document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], textarea').forEach(el => {
-    el.addEventListener('input', () => {
-      clearError(el.closest('.card'));
-      updateProgress();
-    });
+  document.querySelectorAll('input[type="text"],input[type="email"],input[type="date"],textarea').forEach(el=>{
+    el.addEventListener('input',()=>{ clearErr(el.closest('.card')); updateProgress(); });
   });
 
-  function clearError(card) { if (card) card.classList.remove('invalid'); }
+  function clearErr(c){ if(c) c.classList.remove('invalid'); }
 
-  function isCardFilled(card) {
-    const radioGroup = card.querySelector('[data-type="radio"]');
-    if (radioGroup) return !!document.querySelector(`input[name="${radioGroup.dataset.name}"]:checked`);
-    const scaleGroup = card.querySelector('[data-type="scale"]');
-    if (scaleGroup) return !!document.querySelector(`input[name="${scaleGroup.dataset.name}"]:checked`);
-    const input = card.querySelector('input[type="text"], input[type="email"], input[type="date"]');
-    if (input) return input.value.trim().length > 0;
-    const ta = card.querySelector('textarea');
-    if (ta) return ta.value.trim().length > 0;
+  function isFilled(c){
+    const rg=c.querySelector('[data-type="radio"]');
+    if(rg) return !!document.querySelector(`input[name="${rg.dataset.name}"]:checked`);
+    const sg=c.querySelector('[data-type="scale"]');
+    if(sg) return !!document.querySelector(`input[name="${sg.dataset.name}"]:checked`);
+    const inp=c.querySelector('input[type="text"],input[type="email"],input[type="date"]');
+    if(inp) return inp.value.trim().length>0;
+    const ta=c.querySelector('textarea');
+    if(ta) return ta.value.trim().length>0;
     return true;
   }
 
-  function updateProgress() {
-    const pf2 = document.getElementById('progressFill2');
-    const pl2 = document.getElementById('progressLabel2');
-    if (pf2 && pl2) {
-      const cards = document.querySelectorAll('#page2 .card[data-q]');
-      let f = 0; cards.forEach(c => { if (isCardFilled(c)) f++; });
-      pf2.style.width = Math.round(f / cards.length * 100) + '%';
-      pl2.textContent = f + ' / ' + cards.length;
-    }
-    const pf3 = document.getElementById('progressFill3');
-    const pl3 = document.getElementById('progressLabel3');
-    if (pf3 && pl3) {
-      const cards = document.querySelectorAll('#page3 .card[data-q]');
-      let f = 0; cards.forEach(c => { if (isCardFilled(c)) f++; });
-      pf3.style.width = Math.round(f / cards.length * 100) + '%';
-      pl3.textContent = f + ' / ' + cards.length;
-    }
+  function updateProgress(){
+    const pf2=document.getElementById('progressFill2'), pl2=document.getElementById('progressLabel2');
+    if(pf2&&pl2){ const cs=document.querySelectorAll('#page2 .card[data-q]'); let f=0; cs.forEach(c=>{if(isFilled(c))f++;}); pf2.style.width=Math.round(f/cs.length*100)+'%'; pl2.textContent=f+' / '+cs.length; }
+    const pf3=document.getElementById('progressFill3'), pl3=document.getElementById('progressLabel3');
+    if(pf3&&pl3){ const cs=document.querySelectorAll('#page3 .card[data-q]'); let f=0; cs.forEach(c=>{if(isFilled(c))f++;}); pf3.style.width=Math.round(f/cs.length*100)+'%'; pl3.textContent=f+' / '+cs.length; }
   }
 
-  window.goToPage2 = function () {
+  window.goToPage2=function(){
     document.getElementById('page1').classList.remove('active');
     document.getElementById('page2').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top:0,behavior:'smooth'});
   };
-
-  window.goToPage1 = function () {
+  window.goToPage1=function(){
     document.getElementById('page2').classList.remove('active');
     document.getElementById('page1').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top:0,behavior:'smooth'});
   };
-
-  window.goToPage3 = function () {
-    const cards = document.querySelectorAll('#page2 .card[data-q]');
-    let firstInvalid = null;
-    cards.forEach(card => {
-      if (!isCardFilled(card)) {
-        card.classList.add('invalid');
-        if (!firstInvalid) firstInvalid = card;
-      } else {
-        card.classList.remove('invalid');
-      }
-    });
-    if (firstInvalid) { firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-
+  window.goToPage3=function(){
+    const cards=document.querySelectorAll('#page2 .card[data-q]');
+    let first=null;
+    cards.forEach(c=>{ if(!isFilled(c)){ c.classList.add('invalid'); if(!first)first=c; } else c.classList.remove('invalid'); });
+    if(first){ first.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+    // 收集 page1 教材確認
+    p1Data={};
+    const mat=document.querySelector('input[name="entry.637709241"]:checked');
+    if(mat) p1Data['entry.637709241']=mat.value;
     // 收集 page2 資料
-    page2Data = {};
-    const okChecked = document.querySelector('input[name="entry.637709241"]:checked');
-    if (okChecked) page2Data['entry.637709241'] = okChecked.value;
-
-    document.querySelectorAll('#page2 input[type="radio"]:checked, #page2 input[type="text"], #page2 input[type="email"]').forEach(el => {
-      if (el.name && el.value.trim()) page2Data[el.name] = el.value;
-    });
-
-    // 飲食其他欄位
-    const dietOther = document.getElementById('diet_other');
-    if (dietOther && dietOther.value.trim()) {
-      page2Data['entry.1885354714'] = dietOther.value.trim();
-    }
-
+    document.querySelectorAll('#page2 input[type="radio"]:checked,#page2 input[type="text"],#page2 input[type="email"],#page2 input[type="date"]').forEach(el=>{ if(el.name&&el.value.trim()) p1Data[el.name]=el.value; });
+    document.querySelectorAll('#page2 textarea').forEach(el=>{ if(el.name&&el.value.trim()) p1Data[el.name]=el.value; });
     document.getElementById('page2').classList.remove('active');
     document.getElementById('page3').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top:0,behavior:'smooth'});
   };
-
-  window.goToPage2back = function () {
+  window.goToPage2back=function(){
     document.getElementById('page3').classList.remove('active');
     document.getElementById('page2').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top:0,behavior:'smooth'});
   };
 
-  document.getElementById('form3').addEventListener('submit', function (e) {
+  document.getElementById('form3').addEventListener('submit',function(e){
     e.preventDefault();
-    const cards = document.querySelectorAll('#page3 .card[data-q]');
-    let firstInvalid = null;
-    cards.forEach(card => {
-      if (!isCardFilled(card)) {
-        card.classList.add('invalid');
-        if (!firstInvalid) firstInvalid = card;
-      } else {
-        card.classList.remove('invalid');
-      }
-    });
-    if (firstInvalid) { firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-
-    const submitBtn = document.getElementById('submitBtn');
-    submitBtn.disabled = true;
-    submitBtn.textContent = '送出中⋯⋯';
-
-    const page3Data = {};
-    document.querySelectorAll('#form3 input[type="radio"]:checked').forEach(el => {
-      if (el.name && el.value.trim()) page3Data[el.name] = el.value;
-    });
-    document.querySelectorAll('#form3 input[type="text"], #form3 input[type="date"], #form3 textarea').forEach(el => {
-      if (el.name && el.value.trim()) page3Data[el.name] = el.value;
-    });
-
-    const allData = { ...page2Data, ...page3Data };
-
-    const gForm = document.createElement('form');
-    gForm.action = FORM_ACTION;
-    gForm.method = 'POST';
-    gForm.target = 'hidden_iframe';
-    gForm.style.display = 'none';
-
-    Object.entries(allData).forEach(([name, value]) => {
-      const h = document.createElement('input');
-      h.type = 'hidden'; h.name = name; h.value = value;
-      gForm.appendChild(h);
-    });
-
-    document.body.appendChild(gForm);
-    gForm.submit();
-
-    setTimeout(() => {
-      document.getElementById('page3').classList.remove('active');
-      document.getElementById('successScreen').classList.add('show');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 900);
+    const cards=document.querySelectorAll('#page3 .card[data-q]');
+    let first=null;
+    cards.forEach(c=>{ if(!isFilled(c)){ c.classList.add('invalid'); if(!first)first=c; } else c.classList.remove('invalid'); });
+    if(first){ first.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+    const btn=document.getElementById('submitBtn');
+    btn.disabled=true; btn.textContent='送出中⋯⋯';
+    // 收集 page3 資料
+    p2Data={};
+    document.querySelectorAll('#form3 input[type="radio"]:checked').forEach(el=>{ if(el.name&&el.value.trim()) p2Data[el.name]=el.value; });
+    document.querySelectorAll('#form3 input[type="text"],#form3 input[type="date"],#form3 textarea').forEach(el=>{ if(el.name&&el.value.trim()) p2Data[el.name]=el.value; });
+    const all={...p1Data,...p2Data};
+    const gf=document.createElement('form');
+    gf.action=FORM_ACTION; gf.method='POST'; gf.target='hidden_iframe'; gf.style.display='none';
+    Object.entries(all).forEach(([n,v])=>{ const h=document.createElement('input'); h.type='hidden'; h.name=n; h.value=v; gf.appendChild(h); });
+    document.body.appendChild(gf);
+    gf.submit();
+    setTimeout(()=>{ document.getElementById('page3').classList.remove('active'); document.getElementById('successScreen').classList.add('show'); window.scrollTo({top:0,behavior:'smooth'}); },900);
   });
 
   updateProgress();
 })();
 </script>
-
 </body>
 </html>
