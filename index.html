@@ -211,7 +211,12 @@
     <div class="card" data-q="q6"><div class="q-title">囡仔的名<span class="req">*</span></div><div class="q-sub">一人一張表單</div><input type="text" name="entry.1009712280" placeholder="請填寫小孩姓名"><div class="error-msg">請填寫小孩姓名</div></div>
     <div class="card" data-q="q7"><div class="q-title">囡仔佇厝裡慣勢叫的名<span class="req">*</span></div><div class="q-sub">會作名牌、請寫厝裡慣勢叫的名（漢字+台羅），若無，寫完整的名就會使</div><input type="text" name="entry.1221697209" placeholder="例：阿明 a-bîng"><div class="error-msg">請填寫小孩暱稱</div></div>
     <div class="card" data-q="q8"><div class="q-title">囡仔的年歲<span class="req">*</span></div><input type="text" name="entry.487100564" placeholder="例：8歲"><div class="error-msg">請填寫年齡</div></div>
-    <div class="card" data-q="q9"><div class="q-title">同行優待請填寫另外一个囡仔的名<span class="req">*</span></div><div class="q-sub">樂暢驗證優惠，一个人報名就寫「無」</div><input type="text" name="entry.323396176" placeholder="另一位同行囡仔的名（或填「無」）"><div class="error-msg">請填寫（無同行請填「無」）</div></div>
+    <div class="card" data-q="q9">
+      <div class="q-title">優待折扣<span class="req">*</span></div>
+      <div class="q-sub">樂暢驗證優惠用<br>1. 同行優待請填寫另外一个囡仔的名（一个人報名就寫無）<br>2. 其他折扣碼（ex.春天去後驛行踏專屬折扣）</div>
+      <input type="text" name="entry.323396176" placeholder="填寫同行囡仔的名或折扣碼（無則填「無」）">
+      <div class="error-msg">請填寫（無折扣請填「無」）</div>
+    </div>
     <div class="card" data-q="q10">
       <div class="q-title">囡仔的台語能力－聽<span class="req">*</span></div>
       <div class="q-sub">🌟 1 Phu-looh--ê ～ 5 攏袂曉</div>
@@ -430,11 +435,9 @@
     let first=null;
     cards.forEach(c=>{ if(!isFilled(c)){ c.classList.add('invalid'); if(!first)first=c; } else c.classList.remove('invalid'); });
     if(first){ first.scrollIntoView({behavior:'smooth',block:'center'}); return; }
-    // 收集 page1 教材確認
     p1Data={};
     const mat=document.querySelector('input[name="entry.637709241"]:checked');
     if(mat) p1Data['entry.637709241']=mat.value;
-    // 收集 page2 資料
     document.querySelectorAll('#page2 input[type="radio"]:checked,#page2 input[type="text"],#page2 input[type="email"],#page2 input[type="date"]').forEach(el=>{ if(el.name&&el.value.trim()) p1Data[el.name]=el.value; });
     document.querySelectorAll('#page2 textarea').forEach(el=>{ if(el.name&&el.value.trim()) p1Data[el.name]=el.value; });
     document.getElementById('page2').classList.remove('active');
@@ -455,7 +458,6 @@
     if(first){ first.scrollIntoView({behavior:'smooth',block:'center'}); return; }
     const btn=document.getElementById('submitBtn');
     btn.disabled=true; btn.textContent='送出中⋯⋯';
-    // 收集 page3 資料
     p2Data={};
     document.querySelectorAll('#form3 input[type="radio"]:checked').forEach(el=>{ if(el.name&&el.value.trim()) p2Data[el.name]=el.value; });
     document.querySelectorAll('#form3 input[type="text"],#form3 input[type="date"],#form3 textarea').forEach(el=>{ if(el.name&&el.value.trim()) p2Data[el.name]=el.value; });
